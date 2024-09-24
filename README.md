@@ -8,11 +8,11 @@ IN-PROGRESS
 
 ## DCPS-DCPS File Diff Syncing Service IDL
 
-``idl
+```idl
 
 ```
 
-# References
+## References
 
 IN-PROGRESS
 
