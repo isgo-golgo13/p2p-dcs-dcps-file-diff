@@ -1,26 +1,28 @@
 cmake_minimum_required(VERSION 3.15)
-
-project(P2PDcsDcpsFileData LANGUAGES CXX)
+project(OpenDDSProject LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-find_package(fastrtps REQUIRED)
+# Find OpenDDS
+find_package(OpenDDS REQUIRED)
 
+# Include directories
 include_directories(
+    ${OPENDDS_INCLUDE_DIRS}
     include
-    ${fastrtps_INCLUDE_DIRS}
 )
 
+# Source files
 set(SOURCES
     src/Main.cpp
-    src/FileDataChangeApplicationConsumerSupplier.cpp
-    src/FileDataChangeAvailableConsumer.cpp
     src/FileDataChangeConsumerSupplier.cpp
-    generated/FileData.cxx
-    generated/FileDataPubSubTypes.cxx
+    src/FileDataChangeApplicationConsumerSupplier.cpp
+    generated/FileDataTypeSupportImpl.cpp  # Generated from IDL
 )
 
+# Create executable
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} fastrtps fastcdr)
+# Link libraries
+target_link_libraries(${PROJECT_NAME} ${OPENDDS_LIBRARIES})
