@@ -17,7 +17,7 @@ IN-PROGRESS
 The following is the project structure of the DCS-DCPS (DDS) File Diff Syncing Service.
 
 ```shell
-/p2p-dcs-dcps-file-diff
+p2p-dcs-dcps-file-diff
 |-- CMakeLists.txt
 |-- include/
 |   |-- FileDataChangeApplicationConsumerSupplier.h
