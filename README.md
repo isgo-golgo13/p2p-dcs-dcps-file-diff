@@ -1,5 +1,5 @@
 # P2P DCS-DCPS File Diff Syncing Service
-C++20 DDS (Data-Distribution Service) for P2P File Data Diff Sync Service using FastDDS
+C++20 DDS (Data-Distribution Service) for P2P File Data Diff Sync Service using OpenDDS
 
 ## DCS-DCPS File Diff Syncing Service Architecture
 
